@@ -22,11 +22,9 @@ const styles = {
 <template>
   <div
     :style="styles.root"
-    class="relative border-[2px] border-darkdarkgreen text-center bg-transparent h-[24px] mb-[10px] mr-[5px] ml-[5px] rounded-[20px]"
+    class="overflow-hidden relative border-[2px] border-darkdarkgreen text-center bg-transparent h-[24px] mb-[10px] mr-[5px] ml-[5px] rounded-[20px]"
   >
-    <div :style="styles.filled" class="bg-darkgreen h-[100%] rounded-l-[20px]"></div>
-    <span class="absolute top-0"> {{ percentage }}% </span>
+    <div :style="styles.filled" class="bg-darkgreen h-[100%]"></div>
+    <span class="absolute top-0" data-cy="percentages"> {{ percentage }}% </span>
   </div>
 </template>
-
-<style></style>

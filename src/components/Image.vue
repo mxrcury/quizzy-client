@@ -8,6 +8,7 @@ defineProps({
 </script>
 <template>
   <img
+    data-cy="img"
     class="box_shadow hover:-translate-y-[5px] mb-[30px] w-[403px] h-[374px] object-cover rounded-[16px]"
     :src="url"
   />

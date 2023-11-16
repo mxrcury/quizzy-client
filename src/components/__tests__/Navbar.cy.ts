@@ -3,8 +3,16 @@ import Navbar from '../Navbar.vue'
 const aboutUsTitleText = 'about us'
 
 describe('Navbar', () => {
-  it.skip('renders link with text "about us"', () => {
+  it('renders github link with text "created by" ', () => {
     cy.mount(Navbar)
-    cy.get('p').should('contain', aboutUsTitleText)
+
+    cy.get('[data-cy=github]').should('contain.text', 'mxrcury')
+    cy.get('[data-cy=createdBy]').should('contain.text', 'created by')
+  })
+
+  it('renders github link with text "created by" ', () => {
+    cy.mount(Navbar)
+
+    cy.get('[data-cy=logo]').should('contain.text', '&quizzy')
   })
 })
