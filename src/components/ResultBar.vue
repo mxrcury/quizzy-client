@@ -1,0 +1,32 @@
+<script setup>
+import { defineProps } from 'vue'
+const props = defineProps({
+  percentage: {
+    type: Number,
+    required: true
+  }
+})
+const MAX_WIDTH = 400
+const widthPerPercentages = (MAX_WIDTH * props.percentage) / 100
+
+const styles = {
+  root: {
+    width: `${MAX_WIDTH}px`
+  },
+  filled: {
+    width: `${widthPerPercentages}px`
+  }
+}
+</script>
+
+<template>
+  <div
+    :style="styles.root"
+    class="relative border-[2px] border-darkdarkgreen text-center bg-transparent h-[24px] mb-[10px] mr-[5px] ml-[5px] rounded-[20px]"
+  >
+    <div :style="styles.filled" class="bg-darkgreen h-[100%] rounded-l-[20px]"></div>
+    <span class="absolute top-0"> {{ percentage }}% </span>
+  </div>
+</template>
+
+<style></style>
